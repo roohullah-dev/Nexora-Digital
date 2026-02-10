@@ -1,3 +1,4 @@
+// Portfolio.jsx
 import React from "react";
 import assets from "../assets/assets";
 import Title from "./Title";
@@ -38,58 +39,69 @@ function Portfolio() {
       viewport={{ once: true }}
       transition={{ staggerChildren: 0.2 }}
       id="our-work"
-      className="portfolio section-margin-top flex flex-col items-center gap-10 px-3 sm:px-12 lg:px-24 xl:px-40 text-gray-700 dark:text-white overflow-hidden"
+      // className="relative py-32 px-4 sm:px-12 lg:px-24 xl:px-40 bg-gray-50 dark:bg-gray-900 overflow-hidden text-gray-700 dark:text-white"
+      className="portfolio section-margin-top flex flex-col items-center gap-6 xl:px-40 text-center  overflow-hidden text-gray-700 dark:text-white 
+      px-3 sm:px-12 lg:px-44 py-2.5 
+      "
     >
       <Title
         title="Our Work"
         desc="Projects that combine creativity, design, and technology to inspire."
       />
 
-      <div className="flex flex-col gap-16 w-full">
+      {/* Portfolio Projects */}
+      <div className="container-100 flex flex-col gap-32 relative z-10">
         {projects.map((project, index) => {
           const isEven = index % 2 === 0;
           return (
             <motion.div
-              key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className={`flex flex-col lg:flex-row items-center gap-10 ${
+              key={index}
+              className={`relative flex flex-col lg:flex-row items-center gap-20 ${
                 !isEven ? "lg:flex-row-reverse" : ""
               }`}
             >
               {/* Image */}
-              <div className="relative w-full lg:w-1/2 rounded-3xl overflow-hidden shadow-2xl transform transition-transform duration-500 hover:scale-105 hover:rotate-1">
+              <div className=" width-50-Percent lg:w-1/2 w-full rounded-3xl overflow-hidden shadow-2xl transform transition-transform duration-500 hover:scale-105 hover:rotate-1">
                 <img
                   src={project.img}
                   alt={project.title}
-                  className="w-full h-auto sm:h-[300px] md:h-[350px] lg:h-[400px] object-cover lg:object-top rounded-3xl"
+                  className="w-full h-[250px] object-cover lg:object-top transition-transform duration-500"
                 />
-
-                {/* Gradient overlay on hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6 sm:p-8">
-                  <p className="text-sm uppercase text-white font-semibold mb-1 tracking-wide">
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
+                  <p className="text-sm uppercase text-black  font-semibold mb-1 tracking-widest">
                     {project.category}
                   </p>
-                  <h3 className="text-2xl sm:text-3xl font-extrabold text-white bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent">
+                  <h3 className="text-3xl sm:text-4xl font-extrabold text-white bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400 bg-clip-text text-transparent">
                     {project.title}
                   </h3>
-                  <p className="text-gray-300 mt-1 sm:mt-2 text-sm sm:text-base">
-                    {project.desc}
-                  </p>
+                  <p className="text-gray-300 mt-2">{project.desc}</p>
                 </div>
               </div>
 
-              {/* Text aside for larger screens */}
-              <div className="lg:w-1/2 w-full hidden lg:flex flex-col justify-center gap-2">
+              {/* Optional text aside for even more premium layout */}
+              <div className="lg:w-1/2 w-full hidden lg:flex flex-col justify-center">
                 <p className="uppercase text-purple-400 font-semibold mb-2 tracking-wide">
                   {project.category}
                 </p>
-                <h3 className="text-3xl sm:text-4xl font-extrabold bg-clip-text text-transparent from-[#6366f1] via-[#22d3ee] to-[#a855f7] bg-gradient-to-r">
+                {/* <h3
+                  className="text-3xl sm:text-4xl font-extrabold mb-4 bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-400
+                 bg-clip-text text-transparent"
+                >
+                  {project.title}
+                </h3> */}
+                <h3
+                  className="text-3xl sm:text-4xl font-extrabold mb-4 bg-gradient-to-r bg-clip-text text-transparent 
+             from-[#6366f1] via-[#22d3ee] to-[#a855f7]"
+                >
                   {project.title}
                 </h3>
-                <p className="text-gray-600 dark:text-white/70 text-lg sm:text-xl">
+
+                <p className="text-gray-600 dark:text-white/70 text-lg">
                   {project.desc}
                 </p>
               </div>

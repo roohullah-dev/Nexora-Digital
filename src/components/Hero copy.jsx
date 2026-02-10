@@ -18,7 +18,7 @@ function Hero() {
     text-gray-700 dark:text-white
     px-3 sm:px-12 lg:px-44 pt-16 sm:pt-24 lg:pt-32 pb-8 scroll-mt-20 sm:scroll-mt-32"
     >
-      {/* <motion.div
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, y: 0.7 }}
@@ -28,31 +28,6 @@ function Hero() {
         <img src={assets.trusted_profile_Images} alt="" className="w-40" />
         <p className="text-xs font-medium">Trusted by 10K+ people</p>
       </motion.div>
-
-       */}
-
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        viewport={{ once: true }}
-        className="relative w-full max-w-full sm:max-w-7xl"
-      >
-        {/* Main hero image */}
-        <img
-          src={assets.project2}
-          alt=""
-          className="w-full h-auto rounded-2xl object-cover"
-        />
-
-        {/* Decorative absolute image */}
-        <img
-          src={assets.bgImage1}
-          alt=""
-          className="absolute -top-24 -right-24 sm:-top-40 sm:-right-70 z-[-1] dark:hidden w-40 sm:w-64 md:w-80"
-        />
-      </motion.div>
-
       <motion.h1
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}

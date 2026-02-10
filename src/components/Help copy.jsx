@@ -27,6 +27,7 @@ function Help() {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
       icon: assets.content_icon,
     },
+
     {
       id: 4,
       title: "Mobile App Development",
@@ -35,34 +36,31 @@ function Help() {
       icon: assets.social_icon,
     },
   ];
-
   return (
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ staggerChildren: 0.2 }}
       id="help"
-      className="relative flex flex-col items-center gap-10 px-3 sm:px-12 lg:px-24 xl:px-40 text-gray-700 dark:text-white"
+      className="padding_left_right section-margin-top padding-section-card relative flex flex-col items-center gap-7 gpx-4 sm:px-  lg:px-24 xl:px-40 
+      text-gray-700 dark:text-white"
     >
-      {/* Decorative background */}
       <img
         src={assets.bgImage2}
         alt=""
-        className="absolute -top-28 -left-20 sm:-top-44 sm:-left-36 -z-10 dark:hidden w-40 sm:w-64 md:w-80"
+        className="absolute -top-110 -left-70 -z-1 dark:hidden"
       />
-
-      {/* Section title */}
       <Title
         title="How can we help?"
-        desc="From strategy to execution, we craft digital solutions that move your business forward."
+        desc="From strategy to execution, we craft digital solutions that mvoe your business forward."
       />
-
-      {/* Services Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 w-full">
-        {servicesData.map((service, index) => (
-          <ServiceCard key={service.id} service={service} index={index} />
-        ))}
+      <div className="flex flex-col  md:grid grid-cols-2 card-flex-wrap">
+        {servicesData.map((service, index) => {
+          return <ServiceCard key={index} service={service} index={index} />;
+        })}
       </div>
+
+      {/*  */}
     </motion.div>
   );
 }

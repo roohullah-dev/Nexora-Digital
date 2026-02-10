@@ -16,25 +16,25 @@ function Teams() {
         desc="Projects that combine creativity, design, and technology to inspire."
       />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5 w-full">
+      <div className="card-flex-wrap grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5">
         {teamData.map((member, index) => (
           <motion.div
-            key={index}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="flex flex-col sm:flex-row items-center gap-5 p-4 rounded-xl border border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-xl shadow-gray-100 dark:shadow-white/5 hover:scale-105 transition-all duration-300 w-full"
+            key={index}
+            className="flex max-sm:flex-col items-center gap-5 p-4 rounded-xl border border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-xl shadow-gray-100 dark:shadow-white/5 hover:scale-105 transition-all duration-300"
           >
             {/* Avatar */}
             <img
               src={member.image}
               alt={member.name}
-              className="w-12 h-12 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full object-cover flex-none"
+              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full object-cover flex-none"
             />
 
             {/* Info */}
-            <div className="flex-1 text-center sm:text-left">
+            <div className="flex-1">
               <h3 className="font-bold text-sm">{member.name}</h3>
               <p className="text-xs opacity-60">{member.title}</p>
             </div>
