@@ -61,7 +61,7 @@ function Footer({ theme }) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="bg-slate-100 dark:bg-gray-900 dark:text-white pt-10 px-4 sm:px-12 lg:px-24 xl:px-40"
+      className="bg-slate-100 dark:bg-gray-900 dark:text-white pt-10 pb-4 mt-16 px-4 sm:px-12 lg:px-24 xl:px-40"
     >
       {/* FOOTER TOP */}
       <div className="flex flex-col lg:flex-row justify-between items-start gap-10 text-center lg:text-left w-full">

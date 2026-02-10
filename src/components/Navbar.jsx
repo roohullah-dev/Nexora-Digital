@@ -110,7 +110,7 @@ function Navbar({ theme, setTheme }) {
             exit={{ opacity: 0, y: -20, scale: 0.9 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
             style={{ background: "var(--gradient-primary)" }}
-            className="fixed top-14 right-4 w-64 h-64 rounded-lg shadow-lg flex flex-col gap-4 p-4 text-white z-50 sm:hidden"
+            className="fixed top-14 right-4 w-80 h-96 rounded-lg shadow-lg flex flex-col gap-4 p-4 text-white z-50 sm:hidden"
           >
             {/* Close icon */}
             <img
