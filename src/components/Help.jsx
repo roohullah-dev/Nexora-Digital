@@ -40,27 +40,24 @@ function Help() {
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true }}
+      transition={{ staggerChildren: 0.2 }}
       id="help"
-      className="relative flex flex-col items-center gap-10 px-3 sm:px-12 lg:px-24 xl:px-40 text-gray-700 dark:text-white"
+      className="section-margin-top relative flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 text-gray-700 dark:text-white"
     >
-      {/* Decorative background */}
       <img
         src={assets.bgImage2}
         alt=""
-        className="absolute -top-28 -left-20 sm:-top-44 sm:-left-36 -z-10 dark:hidden w-40 sm:w-64 md:w-80"
+        className="absolute -top-28 -left-16 sm:-top-40 sm:-left-24 -z-1 dark:hidden"
       />
-
-      {/* Section title */}
       <Title
         title="How can we help?"
         desc="From strategy to execution, we craft digital solutions that move your business forward."
       />
 
-      {/* Services Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
         {servicesData.map((service, index) => (
-          <ServiceCard key={service.id} service={service} index={index} />
+          <ServiceCard key={index} service={service} index={index} />
         ))}
       </div>
     </motion.div>

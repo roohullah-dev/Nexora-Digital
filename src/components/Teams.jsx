@@ -5,12 +5,7 @@ import { motion } from "framer-motion";
 
 function Teams() {
   return (
-    <div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      className="container-100 section-margin-top flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 text-gray-800 dark:text-white"
-    >
+    <div className="section-margin-top flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 text-gray-800 dark:text-white">
       <Title
         title="Meet The Team"
         desc="Projects that combine creativity, design, and technology to inspire."
@@ -24,19 +19,16 @@ function Teams() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: index * 0.1 }}
             viewport={{ once: true }}
-            className="flex flex-col sm:flex-row items-center gap-5 p-4 rounded-xl border border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-xl shadow-gray-100 dark:shadow-white/5 hover:scale-105 transition-all duration-300 w-full"
+            className="flex flex-col sm:flex-row items-center gap-4 p-4 rounded-xl border border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-900 shadow-xl dark:shadow-white/5 hover:scale-105 transition-transform duration-300 w-full"
           >
-            {/* Avatar */}
             <img
               src={member.image}
               alt={member.name}
-              className="w-12 h-12 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full object-cover flex-none"
+              className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full object-cover flex-none"
             />
-
-            {/* Info */}
             <div className="flex-1 text-center sm:text-left">
-              <h3 className="font-bold text-sm">{member.name}</h3>
-              <p className="text-xs opacity-60">{member.title}</p>
+              <h3 className="font-bold text-sm md:text-base">{member.name}</h3>
+              <p className="text-xs md:text-sm opacity-60">{member.title}</p>
             </div>
           </motion.div>
         ))}

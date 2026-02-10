@@ -44,59 +44,52 @@ function Contact() {
 
       <form
         onSubmit={onSubmit}
-        className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 w-full max-w-3xl"
+        className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-2xl"
       >
-        {/* Name */}
-        <div className="flex flex-col">
-          <label className="mb-2 text-sm font-medium">Your Name</label>
-          <div className="flex items-center gap-2 px-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900">
-            <img src={assets.person_icon} alt="Name Icon" className="w-5 h-5" />
+        <div>
+          <p className="mb-2 text-sm font-medium">Your name</p>
+          <div className="flex items-center gap-2 pl-3 rounded-lg border border-gray-300 dark:border-gray-600">
+            <img src={assets.person_icon} alt="" />
             <input
               type="text"
+              placeholder="Enter Your name"
               name="name"
-              placeholder="Enter your name"
               required
-              className="w-full p-3 text-sm outline-none bg-transparent"
+              className="w-full p-3 text-sm outline-none"
             />
           </div>
         </div>
 
-        {/* Email */}
-        <div className="flex flex-col">
-          <label className="mb-2 text-sm font-medium">Your Email</label>
-          <div className="flex items-center gap-2 px-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900">
-            <img src={assets.email_icon} alt="Email Icon" className="w-5 h-5" />
+        <div>
+          <p className="mb-2 text-sm font-medium">Your email</p>
+          <div className="flex items-center gap-2 pl-3 rounded-lg border border-gray-300 dark:border-gray-600">
+            <img src={assets.email_icon} alt="" />
             <input
               type="email"
+              placeholder="Enter Your email"
               name="email"
-              placeholder="Enter your email"
               required
-              className="w-full p-3 text-sm outline-none bg-transparent"
+              className="w-full p-3 text-sm outline-none"
             />
           </div>
         </div>
 
-        {/* Message */}
-        <div className="sm:col-span-2 flex flex-col">
-          <label className="mb-2 text-sm font-medium">Message</label>
+        <div className="sm:col-span-2">
+          <p className="mb-2 text-sm font-medium">Message</p>
           <textarea
-            name="message"
-            rows={6}
+            rows={8}
             placeholder="Enter your message"
-            className="w-full p-3 text-sm outline-none rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900"
+            name="message"
+            className="w-full p-3 text-sm outline-none rounded-lg border border-gray-300 dark:border-gray-600"
           />
         </div>
 
-        {/* Submit Button */}
-        <div className="sm:col-span-2 flex justify-center sm:justify-start">
-          <button
-            type="submit"
-            className="button flex items-center gap-2 text-white text-sm px-8 sm:px-10 py-3 rounded-full hover:scale-105 transition-transform"
-          >
-            Submit
-            <img src={assets.arrow_icon} alt="Arrow Icon" className="w-4 h-4" />
-          </button>
-        </div>
+        <button
+          type="submit"
+          className="button w-full sm:w-max flex gap-2 text-white text-sm px-10 py-3 rounded-full cursor-pointer hover:scale-103 transition-all"
+        >
+          Submit <img src={assets.arrow_icon} alt="" className="w-4" />
+        </button>
       </form>
     </motion.div>
   );

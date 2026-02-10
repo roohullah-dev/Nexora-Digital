@@ -38,7 +38,7 @@ function Portfolio() {
       viewport={{ once: true }}
       transition={{ staggerChildren: 0.2 }}
       id="our-work"
-      className="portfolio section-margin-top flex flex-col items-center gap-10 px-3 sm:px-12 lg:px-24 xl:px-40 text-gray-700 dark:text-white overflow-hidden"
+      className="portfolio section-margin-top flex flex-col items-center gap-10 px-4 sm:px-12 lg:px-24 xl:px-40 text-gray-700 dark:text-white overflow-hidden"
     >
       <Title
         title="Our Work"
@@ -55,7 +55,7 @@ function Portfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
-              className={`flex flex-col lg:flex-row items-center gap-10 ${
+              className={`flex flex-col lg:flex-row items-center gap-10 w-full ${
                 !isEven ? "lg:flex-row-reverse" : ""
               }`}
             >
