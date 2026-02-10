@@ -1,7 +1,7 @@
 import React from "react";
 import Title from "./Title";
 import { teamData } from "../assets/assets";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 function Teams() {
   return (
