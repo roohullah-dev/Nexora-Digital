@@ -122,8 +122,13 @@ export default function TestimonialSection() {
           {testimonials.map((_, idx) => (
             <span
               key={idx}
-              className={`w-3 h-3 md:w-4 md:h-4 rounded-full transition-all cursor-pointer ${
-                idx === current ? "bg-green-400 scale-125" : "bg-gray-600"
+              // className={`w-3 h-3 md:w-4 md:h-4 rounded-full transition-all cursor-pointer ${
+              //   idx === current ? "bg-green-400 scale-125" : "bg-gray-600"
+              // }`}
+              className={`w-3 h-3 md:w-4 md:h-4 rounded-full transition-all duration-300 cursor-pointer ${
+                idx === current
+                  ? "bg-[linear-gradient(45deg,#6366f1,#22d3ee,#a855f7,#6366f1)] scale-125 shadow-md"
+                  : "bg-gray-600"
               }`}
               onClick={() => setCurrent(idx)}
             />

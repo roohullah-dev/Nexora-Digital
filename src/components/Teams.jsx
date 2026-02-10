@@ -31,15 +31,7 @@ function Teams() {
             <img
               src={member.image}
               alt={member.name}
-              className="
-    w-10 h-10        /* very small phones */
-    sm:w-12 sm:h-12  /* ≥640px */
-    md:w-14 md:h-14  /* ≥768px */
-    lg:w-16 lg:h-16  /* ≥1024px */
-    rounded-full
-    object-cover
-    shrink-0
-  "
+              className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-full object-cover shrink-0"
             />
 
             <div flex-1>

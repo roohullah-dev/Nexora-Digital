@@ -5,11 +5,18 @@ import { motion } from "framer-motion";
 
 function Hero() {
   return (
+    // <section
+    //   id="home"
+    //   className="section-margin-top flex flex-col items-center gap-6 text-center w-full overflow-hidden text-gray-700 dark:text-white
+    //   px-3 sm:px-12 lg:px-44 py-2.5
+    //   "
+    // >
     <section
       id="home"
-      className="section-margin-top flex flex-col items-center gap-6 text-center w-full overflow-hidden text-gray-700 dark:text-white  
-      px-3 sm:px-12 lg:px-44 py-2.5 
-      "
+      className="
+    flex flex-col items-center gap-6 text-center w-full overflow-hidden
+    text-gray-700 dark:text-white
+    px-3 sm:px-12 lg:px-44 pt-16 sm:pt-24 lg:pt-32 pb-8 scroll-mt-20 sm:scroll-mt-32"
     >
       <motion.div
         initial={{ opacity: 0, y: 20 }}

@@ -143,6 +143,10 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
+.footer-button {
+  border-radius: 0 30px 30px 0;
+}
+
 .darkMode {
   font-size: 1rem;
   font-weight: 400;
