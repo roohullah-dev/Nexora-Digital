@@ -123,7 +123,7 @@ function Footer({ theme }) {
             />
             <button
               onClick={handleSubscribe}
-              className="button footer-button bg-purple-600 text-white py-3 px-6 sm:px-10 rounded-full sm:rounded-r-full hover:scale-105 transition-transform duration-200"
+              className="button  text-white py-3 px-6 sm:px-10 rounded-full sm:rounded-r-full hover:scale-105 transition-transform duration-200"
             >
               Subscribe
             </button>

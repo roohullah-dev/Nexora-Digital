@@ -86,9 +86,10 @@ function Contact() {
 
         <button
           type="submit"
-          className="button w-full sm:w-max flex gap-2 text-white text-sm px-10 py-3 rounded-full cursor-pointer hover:scale-103 transition-all"
+          className="button w-full sm:w-max flex items-center justify-center sm:justify-start gap-2 text-white text-sm px-10 py-3 rounded-full cursor-pointer hover:scale-103 transition-all"
         >
-          Submit <img src={assets.arrow_icon} alt="" className="w-4" />
+          Submit
+          <img src={assets.arrow_icon} alt="" className="w-4" />
         </button>
       </form>
     </motion.div>
