@@ -104,13 +104,30 @@ function Navbar({ theme, setTheme }) {
       {/* Mobile Dropdown Links */}
       <AnimatePresence>
         {sideBarOpen && (
+          // <motion.div
+          //   initial={{ opacity: 0, y: -20, scale: 0.9 }}
+          //   animate={{ opacity: 1, y: 0, scale: 1 }}
+          //   exit={{ opacity: 0, y: -20, scale: 0.9 }}
+          //   transition={{ duration: 0.25, ease: "easeOut" }}
+          //   style={{ background: "var(--gradient-primary)" }}
+          //   className="fixed top-14 right-4 rounded-lg shadow-lg flex flex-col gap-4 p-4 text-white z-50 sm:hidden"
+          // >
           <motion.div
             initial={{ opacity: 0, y: -20, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -20, scale: 0.9 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
             style={{ background: "var(--gradient-primary)" }}
-            className="fixed top-14 right-4 w-80 h-96 rounded-lg shadow-lg flex flex-col gap-4 p-4 text-white z-50 sm:hidden"
+            className="
+    fixed top-14 left-1/2 transform -translate-x-1/2
+    w-11/12 sm:w-1/2
+    rounded-lg shadow-lg
+    flex flex-col items-center justify-center gap-2
+    p-4 text-white text-center
+    z-50 sm:hidden
+    cursor-pointer
+    hover:scale-105 hover:shadow-xl transition-all duration-200
+  "
           >
             {/* Close icon */}
             <img

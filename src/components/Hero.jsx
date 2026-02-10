@@ -18,7 +18,7 @@ function Hero() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="inline-flex items-center gap-2 border border-gray-700 p-1.5 pr-4 rounded-full sm:w-72"
+        className="inline-flex items-center gap-2 border border-gray-700 p-1.5 pr-4 rounded-full"
       >
         <img src={assets.trusted_profile_Images} alt="" className="w-40" />
         <p className="text-xs font-medium">Trusted by 10K+ people</p>
