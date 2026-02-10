@@ -24,7 +24,7 @@ function Navbar({ theme, setTheme }) {
       className="flex justify-between items-center px-3 sm:px-12 lg:px-44 py-2.5 sticky top-0 z-30 backdrop-blur-xl bg-white/50 dark:bg-gray-900/70 shadow-md font-medium"
     >
       {/* Logo */}
-      <a
+      {/* <a
         onClick={() => scrollToSection("home")}
         className="cursor-pointer sm:w-32"
       >
@@ -32,6 +32,23 @@ function Navbar({ theme, setTheme }) {
           src="/logo_300_70.png"
           alt="Logo"
           className="w-60 sm:w-40 lg:w-40 xl:3-40"
+        />
+      </a> */}
+      {/* Logo */}
+      <a
+        onClick={() => scrollToSection("home")}
+        className="cursor-pointer flex items-center"
+      >
+        <img
+          src="/logo_300_70.png"
+          alt="Logo"
+          className="
+      w-36          /* mobile */
+      sm:w-40       /* ≥640px */
+      md:w-44       /* ≥768px */
+      lg:w-48       /* ≥1024px */
+      h-auto
+    "
         />
       </a>
 
