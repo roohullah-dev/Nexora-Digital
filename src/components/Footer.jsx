@@ -85,7 +85,8 @@ function Footer({ theme }) {
             From strategy to execution, we craft digital solutions that move
             your business forward.
           </p>
-          <ul className="flex flex-wrap gap-6 justify-center lg:justify-start">
+          {/* <ul className="flex flex-wrap gap-6 justify-center lg:justify-start"> */}
+          <ul className="flex flex-col gap-3 items-center lg:items-start">
             <li>
               <button
                 onClick={() => scrollToSection("home")}
@@ -145,7 +146,7 @@ function Footer({ theme }) {
             />
             <button
               onClick={handleSubscribe}
-              className="rounded-r-full bg-[#a855f7] text-black py-3 px-6 sm:px-10 rounded-r-full hover:scale-105 transition-transform duration-200"
+              className="button rounded-r-full bg-[#a855f7] text-black py-3 px-6 sm:px-10 rounded-r-full hover:scale-105 transition-transform duration-200"
             >
               Subscribe
             </button>
@@ -156,17 +157,16 @@ function Footer({ theme }) {
       <hr className="border-gray-300 dark:border-gray-600 my-6" />
 
       {/* FOOTER BOTTOM */}
+      {/* FOOTER BOTTOM */}
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.4 }}
         viewport={{ once: true }}
-        className="pb-6 text-sm text-gray-500 flex flex-col sm:flex-row justify-center sm:justify-between gap-4 items-center"
+        className="pb-6 text-sm text-gray-500 flex flex-col gap-4 items-center"
       >
-        <p>Copyright © 2025 RoohullahDev - All Rights Reserved.</p>
-
         {/* Social Links */}
-        <ul className="flex gap-4 justify-center">
+        <ul className="flex gap-5 justify-center">
           {socialData.map((social, index) => (
             <li key={index}>
               <a
@@ -186,6 +186,11 @@ function Footer({ theme }) {
             </li>
           ))}
         </ul>
+
+        {/* Copyright */}
+        <p className="text-center">
+          Copyright © 2025 RoohullahDev — All Rights Reserved.
+        </p>
       </motion.div>
     </motion.div>
   );

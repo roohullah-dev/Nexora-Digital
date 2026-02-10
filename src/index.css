@@ -172,7 +172,8 @@
 /* RESPONSIVE LAYOUT  */
 @media screen and (max-width: 1024px) {
   .section-margin-top {
-    margin-top: 0 !important;
+    /* roohani */
+    margin-top: -20px !important;
   }
 
   .portfolio {
