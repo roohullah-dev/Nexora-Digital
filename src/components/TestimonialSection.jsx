@@ -58,11 +58,10 @@ export default function TestimonialSection() {
     >
       <div className="max-w-3xl mx-auto px-6 text-center">
         {/* Section Heading */}
-  
-          <Title
-            title="What Our Clients Say"
-            desc="Our clients trust us to deliver exceptional digital experiences. Here’s what they have to say about working with our team."
-          />
+        <Title
+          title="What Our Clients Say"
+          desc="Our clients trust us to deliver exceptional digital experiences. Here’s what they have to say about working with our team."
+        />
 
         {/* Testimonial Body */}
         <div className="relative overflow-hidden">
@@ -86,16 +85,21 @@ export default function TestimonialSection() {
               </motion.p>
 
               <div className="flex items-center justify-center gap-4 mt-6">
-  {/* Gradient Border Wrapper */}
-  <div className="w-12 h-12 md:w-14 md:h-14 rounded-full p-[2px] bg-gradient-to-r from-[#6366f1] via-[#22d3ee] to-[#a855f7] animate-gradient">
-    <img
-      src={testimonials[current].avatar}
-      alt={testimonials[current].name}
-      className="w-full h-full rounded-full object-cover border-2 border-gray-900"
-    />
-  </div>
-</div>
-
+                {/* <img
+                  src={testimonials[current].avatar}
+                  alt={testimonials[current].name}
+                  className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover border-2 border-green-400"
+                /> */}
+                <img
+                  src={testimonials[current].avatar}
+                  alt={testimonials[current].name}
+                  className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover border-2 border-transparent"
+                  style={{
+                    borderImage:
+                      "linear-gradient(45deg, #6366f1, #22d3ee, #a855f7, #6366f1) 1",
+                    borderImageSlice: 1,
+                  }}
+                />
 
                 <div className="text-left">
                   <h3 className="dark:text-white font-semibold text-sm md:text-base">
