@@ -32,7 +32,7 @@ function Help() {
       title: "Mobile App Development",
       description:
         "I design intuitive mobile apps for iOS and Android with smooth performance.",
-      icon: assets.mobile,
+      icon: assets.mobile_App,
     },
   ];
 

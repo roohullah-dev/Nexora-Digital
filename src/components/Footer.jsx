@@ -138,9 +138,16 @@ function Footer({ theme }) {
               placeholder="Enter your email"
               className="w-full sm:flex-1 p-3 text-sm outline-none rounded-full sm:rounded-l-full bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-300"
             />
-            <button
+            {/* <button
               onClick={handleSubscribe}
               className="flex justify-center items-center text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 py-3 px-6 sm:px-10 rounded-full sm:rounded-r-full shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
+            >
+              Subscribe
+            </button> */}
+
+            <button
+              onClick={handleSubscribe}
+              className="button text-white py-3 px-6 sm:px-10 rounded-r-full hover:scale-105 transition-transform duration-200 flex justify-center items-center"
             >
               Subscribe
             </button>
@@ -148,7 +155,7 @@ function Footer({ theme }) {
         </motion.div>
       </div>
 
-      <hr className="border-gray-700 my-6" />
+      <hr className="border-gray-300 my-6" />
 
       {/* Footer Bottom */}
       <motion.div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-4 text-sm text-gray-400">

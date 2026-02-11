@@ -32,14 +32,10 @@ function TestimonialSection() {
     >
       <div className="max-w-6xl mx-auto text-center">
         {/* Header */}
-        <h2 className="text-3xl sm:text-4xl font-semibold mb-4 text-gray-900 dark:text-white">
-          What Our Clients Say
-        </h2>
-        <p className="text-gray-600 dark:text-white/75 mb-12 text-lg">
-          We pride ourselves on delivering exceptional experiences. Here's what
-          our clients think.
-        </p>
-
+        <Title
+          title="What Our Clients Say"
+          desc="Our clients trust us to deliver exceptional digital experiences. Here’s what they have to say about working with our team."
+        />
         {/* Testimonials */}
         <div className="flex flex-col md:flex-row md:space-x-8 space-y-12 md:space-y-0 justify-center items-start">
           {testimonials.map((testimonial, idx) => (

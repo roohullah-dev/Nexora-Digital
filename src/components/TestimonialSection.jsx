@@ -42,29 +42,27 @@ export default function TestimonialSection() {
   const [current, setCurrent] = useState(0);
   const length = testimonials.length;
 
-  // Auto-slide every 7 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % length);
     }, 7000);
     return () => clearInterval(interval);
-  }, []);
+  }, [length]);
 
   return (
     <section
       id="testimonials"
-      // className="py-24 bg-black/70 relative z-10"
-      className="section-margin-top relative z-10 px-3 sm:px-12 lg:px-44 py-2.5"
+      className="section-margin-top relative z-10 px-4 sm:px-12 lg:px-44 py-12 text-center text-gray-800 dark:text-white"
     >
-      <div className="max-w-3xl mx-auto px-6 text-center">
-        {/* Section Heading */}
+      <div className="max-w-4xl mx-auto flex flex-col items-center gap-8">
+        {/* Title */}
         <Title
           title="What Our Clients Say"
           desc="Our clients trust us to deliver exceptional digital experiences. Here’s what they have to say about working with our team."
         />
 
         {/* Testimonial Body */}
-        <div className="relative overflow-hidden">
+        <div className="relative w-full flex flex-col items-center">
           <AnimatePresence mode="wait">
             <motion.div
               key={current}
@@ -72,10 +70,10 @@ export default function TestimonialSection() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.6 }}
+              className="flex flex-col items-center"
             >
               <motion.p
-                // className="dark:text-white text-base md:text-lg leading-relaxed"
-                className="max-w-lg text-center text-gray-500 dark:text-white/75 mb-6"
+                className="max-w-2xl mx-auto text-gray-500 dark:text-white/75 text-base md:text-lg leading-relaxed mb-6"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
@@ -84,40 +82,36 @@ export default function TestimonialSection() {
                 "{testimonials[current].feedback}"
               </motion.p>
 
-              <div className="flex items-center justify-center gap-4 mt-6">
-                {/* <img
-                  src={testimonials[current].avatar}
-                  alt={testimonials[current].name}
-                  className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover border-2 border-green-400"
-                /> */}
-                <img
-                  src={testimonials[current].avatar}
-                  alt={testimonials[current].name}
-                  className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover border-2 border-transparent"
-                  style={{
-                    borderImage:
-                      "linear-gradient(45deg, #6366f1, #22d3ee, #a855f7, #6366f1) 1",
-                    borderImageSlice: 1,
-                  }}
-                />
+              <div className="flex items-center justify-center gap-4 mt-4">
+                {/* Seamless Gradient Avatar */}
+                <div className="relative w-12 h-12 md:w-14 md:h-14">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-indigo-500 via-cyan-400 to-purple-500"></div>
+                  <div className="absolute inset-[2px] rounded-full overflow-hidden bg-white dark:bg-black">
+                    <img
+                      src={testimonials[current].avatar}
+                      alt={testimonials[current].name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
 
                 <div className="text-left">
-                  <h3 className="dark:text-white font-semibold text-sm md:text-base">
+                  <h3 className="font-semibold text-sm md:text-base">
                     {testimonials[current].name}
                   </h3>
-                  <p className=" dark:text-white text-xs md:text-sm">
+                  <p className="text-xs md:text-sm opacity-75">
                     {testimonials[current].role}
                   </p>
 
                   <div className="flex gap-1 mt-1">
-                    {Array.from({ length: testimonials[current].rating }).map(
-                      (_, i) => (
-                        <FaStar
-                          key={i}
-                          className="text-yellow-400 text-xs md:text-sm"
-                        />
-                      ),
-                    )}
+                    {Array.from({
+                      length: testimonials[current].rating,
+                    }).map((_, i) => (
+                      <FaStar
+                        key={i}
+                        className="text-yellow-400 text-xs md:text-sm"
+                      />
+                    ))}
                   </div>
                 </div>
               </div>
@@ -126,13 +120,10 @@ export default function TestimonialSection() {
         </div>
 
         {/* Navigation Dots */}
-        <div className="flex justify-center mt-6 md:mt-8 gap-3">
+        <div className="flex justify-center mt-4 gap-3">
           {testimonials.map((_, idx) => (
             <span
               key={idx}
-              // className={`w-3 h-3 md:w-4 md:h-4 rounded-full transition-all cursor-pointer ${
-              //   idx === current ? "bg-green-400 scale-125" : "bg-gray-600"
-              // }`}
               className={`w-3 h-3 md:w-4 md:h-4 rounded-full transition-all duration-300 cursor-pointer ${
                 idx === current
                   ? "gradient-dot scale-125 shadow-md"
