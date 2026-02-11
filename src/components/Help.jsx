@@ -10,28 +10,28 @@ function Help() {
       id: 1,
       title: "Advertising",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+        "I create targeted advertising campaigns that reach the right audience, boost engagement, and drive measurable growth for your business.",
       icon: assets.ads_icon,
     },
     {
       id: 2,
       title: "Branding",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+        "I craft memorable brand identities that reflect your vision, values, and personality, helping your business stand out and build trust.",
       icon: assets.marketing_icon,
     },
     {
       id: 3,
       title: "Web Development",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+        "I build modern, responsive websites that deliver seamless user experiences, fast loading times, and scalable solutions for your business.",
       icon: assets.content_icon,
     },
     {
       id: 4,
       title: "Mobile App Development",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
+        "I design intuitive mobile apps for iOS and Android with smooth performance, elegant design, and engaging user experiences.",
       icon: assets.social_icon,
     },
   ];
@@ -42,7 +42,7 @@ function Help() {
       whileInView="visible"
       viewport={{ once: true }}
       transition={{ staggerChildren: 0.2 }}
-      id="help"
+      id="services"
       className="section-margin-top relative flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 text-gray-700 dark:text-white"
     >
       <img
@@ -52,7 +52,7 @@ function Help() {
       />
       <Title
         title="How can we help?"
-        desc="From strategy to execution, we craft digital solutions that move your business forward."
+        desc="I help businesses grow by creating impactful digital solutions. From strategy and design to marketing and technology, I deliver results-driven experiences that engage audiences and strengthen your brand."
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">

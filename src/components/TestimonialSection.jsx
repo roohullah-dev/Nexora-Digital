@@ -65,7 +65,10 @@ export default function TestimonialSection() {
           transition={{ duration: 0.7 }}
           className="text-3xl md:text-4xl font-bold dark:text-white mb-12 text-center tracking-wide"
         >
-          <Title title="What Clients Say" />
+          <Title
+            title="What Our Clients Say"
+            desc="Our clients trust us to deliver exceptional digital experiences. Here’s what they have to say about working with our team."
+          />
         </motion.h2>
 
         {/* Testimonial Body */}
@@ -79,7 +82,8 @@ export default function TestimonialSection() {
               transition={{ duration: 0.6 }}
             >
               <motion.p
-                className="dark:text-white text-base md:text-lg leading-relaxed"
+                // className="dark:text-white text-base md:text-lg leading-relaxed"
+                className="max-w-lg text-center text-gray-500 dark:text-white/75 mb-6"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
@@ -89,11 +93,22 @@ export default function TestimonialSection() {
               </motion.p>
 
               <div className="flex items-center justify-center gap-4 mt-6">
-                <img
+                {/* <img
                   src={testimonials[current].avatar}
                   alt={testimonials[current].name}
                   className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover border-2 border-green-400"
+                /> */}
+                <img
+                  src={testimonials[current].avatar}
+                  alt={testimonials[current].name}
+                  className="w-12 h-12 md:w-14 md:h-14 rounded-full object-cover border-2 border-transparent"
+                  style={{
+                    borderImage:
+                      "linear-gradient(45deg, #6366f1, #22d3ee, #a855f7, #6366f1) 1",
+                    borderImageSlice: 1,
+                  }}
                 />
+
                 <div className="text-left">
                   <h3 className="dark:text-white font-semibold text-sm md:text-base">
                     {testimonials[current].name}
@@ -101,6 +116,7 @@ export default function TestimonialSection() {
                   <p className=" dark:text-white text-xs md:text-sm">
                     {testimonials[current].role}
                   </p>
+
                   <div className="flex gap-1 mt-1">
                     {Array.from({ length: testimonials[current].rating }).map(
                       (_, i) => (
@@ -127,7 +143,7 @@ export default function TestimonialSection() {
               // }`}
               className={`w-3 h-3 md:w-4 md:h-4 rounded-full transition-all duration-300 cursor-pointer ${
                 idx === current
-                  ? "bg-[linear-gradient(45deg,#6366f1,#22d3ee,#a855f7,#6366f1)] scale-125 shadow-md"
+                  ? "gradient-dot scale-125 shadow-md"
                   : "bg-gray-600"
               }`}
               onClick={() => setCurrent(idx)}

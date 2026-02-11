@@ -8,7 +8,7 @@ function Teams() {
     <div className="section-margin-top flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 text-gray-800 dark:text-white">
       <Title
         title="Meet The Team"
-        desc="Projects that combine creativity, design, and technology to inspire."
+        desc="Our talented team combines creativity, expertise, and passion to deliver exceptional digital solutions. Each member brings unique skills to help your business succeed."
       />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5 w-full">

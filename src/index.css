@@ -173,6 +173,26 @@
   padding-top: 8rem !important;
 }
 
+.gradient-dot {
+  background: linear-gradient(45deg, #6366f1, #22d3ee, #a855f7, #6366f1);
+  background-size: 300% 300%;
+  animation: gradientMove 3s linear infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 /* RESPONSIVE LAYOUT  */
 @media screen and (max-width: 1024px) {
   .section-margin-top {

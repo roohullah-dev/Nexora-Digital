@@ -8,25 +8,25 @@ const projects = [
     img: assets.project1,
     title: "E-Commerce Website",
     category: "Web Development",
-    desc: "A fully responsive online store with custom checkout, admin dashboard, and modern UX.",
+    desc: "I build user-friendly ecommerce websites that drive sales and provide seamless shopping experiences.",
   },
   {
     img: assets.project2,
     title: "Mobile App UI",
     category: "UI/UX Design",
-    desc: "Sleek, intuitive interface designed for iOS and Android platforms.",
+    desc: "I design intuitive mobile app interfaces that enhance engagement and reflect your brand identity.",
   },
   {
     img: assets.project3,
     title: "Brand Identity",
     category: "Brand Strategy",
-    desc: "Complete branding package including logo, typography, and brand guidelines.",
+    desc: "I craft cohesive brand identities that communicate your vision and leave a lasting impression.",
   },
   {
     img: assets.project4,
     title: "SaaS Dashboard",
     category: "Web App",
-    desc: "Dynamic dashboard with analytics, charts, and real-time data visualization.",
+    desc: "I design interactive dashboards that simplify data and help teams make smarter decisions.",
   },
 ];
 
@@ -42,7 +42,7 @@ function Portfolio() {
     >
       <Title
         title="Our Work"
-        desc="Projects that combine creativity, design, and technology to inspire."
+        desc="I deliver innovative and visually engaging projects that solve real business problems. Each project combines design, functionality, and strategy to create meaningful digital experiences."
       />
 
       <div className="flex flex-col gap-16 w-full">
@@ -89,7 +89,8 @@ function Portfolio() {
                 <h3 className="text-3xl sm:text-4xl font-extrabold bg-clip-text text-transparent from-[#6366f1] via-[#22d3ee] to-[#a855f7] bg-gradient-to-r">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 dark:text-white/70 text-lg sm:text-xl">
+                {/* <p className="text-gray-600 dark:text-white/70 text-lg sm:text-xl"> */}
+                <p className="max-w-lg text-center text-gray-500 dark:text-white/75 mb-6">
                   {project.desc}
                 </p>
               </div>

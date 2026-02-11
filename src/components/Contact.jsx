@@ -38,8 +38,8 @@ function Contact() {
       className="section-margin-top flex flex-col items-center gap-7 px-4 sm:px-12 lg:px-24 xl:px-40 text-gray-800 dark:text-white"
     >
       <Title
-        title="Reach out to us"
-        desc="Ready to grow your brand? Let's connect and build something exceptional together."
+        title="Work With Us"
+        desc="Have a project in mind or want to discuss ideas? Reach out, and let’s create digital experiences that grow your business."
       />
 
       <form

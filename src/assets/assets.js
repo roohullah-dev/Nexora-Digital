@@ -135,7 +135,7 @@ export const teamData = [
   },
   {
     name: "Jessica Smith",
-    title: "Social Media Strategist",
+    title: "Full Stack Developer",
     image: team7, // female
   },
   {
