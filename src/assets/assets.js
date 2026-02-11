@@ -43,6 +43,7 @@ import trusted_profile_Images1 from "./trusted_profile_Images.png";
 import webflow from "./webflow.png";
 import subsport from "./subsport.png";
 import vision from "./vision.png";
+import mobile_App from "./mobile.png";
 
 import team1 from "./team1.jpg";
 import team2 from "./team2.jpg";
@@ -98,6 +99,7 @@ const assets = {
   project2,
   project3,
   project4,
+  mobile_App,
 };
 
 export default assets;

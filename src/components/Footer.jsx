@@ -99,7 +99,7 @@ function Footer({ theme }) {
         </motion.div>
 
         {/* Right Block */}
-        <motion.div className="flex flex-col items-center lg:items-end w-full lg:w-1/2 text-center lg:text-left">
+        {/* <motion.div className="flex flex-col items-center lg:items-end w-full lg:w-1/2 text-center lg:text-left">
           <h3 className="font-semibold text-lg sm:text-xl">
             Subscribe to our newsletter
           </h3>
@@ -117,6 +117,30 @@ function Footer({ theme }) {
             <button
               onClick={handleSubscribe}
               className="button text-center items-center text-white py-3 px-6 sm:px-10 rounded-full sm:rounded-r-full hover:scale-105 transition-transform duration-200"
+            >
+              Subscribe
+            </button>
+          </div>
+        </motion.div> */}
+        <motion.div className="flex flex-col items-center lg:items-end w-full lg:w-1/2 text-center lg:text-left p-4">
+          <h3 className="font-semibold text-lg sm:text-xl">
+            Subscribe to our newsletter
+          </h3>
+          <p className="text-sm mt-2 mb-4 text-gray-400">
+            The latest news and resources, sent to your inbox weekly
+          </p>
+
+          <div className="flex flex-col sm:flex-row w-full max-w-md gap-2 justify-center lg:justify-end items-center">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your email"
+              className="w-full sm:flex-1 p-3 text-sm outline-none rounded-full sm:rounded-l-full bg-gray-800 border border-gray-700 text-white placeholder-gray-500 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-300"
+            />
+            <button
+              onClick={handleSubscribe}
+              className="flex justify-center items-center text-white bg-indigo-600 hover:bg-indigo-500 active:bg-indigo-700 py-3 px-6 sm:px-10 rounded-full sm:rounded-r-full shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105"
             >
               Subscribe
             </button>
@@ -140,9 +164,12 @@ function Footer({ theme }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.name}
-                className="text-gray-400 hover:bg-gradient-to-r hover:from-[#6366f1] hover:via-[#22d3ee] hover:via-[#a855f7] hover:to-[#6366f1] hover:text-transparent hover:bg-clip-text transition-all duration-300 text-lg flex items-center justify-center"
+                className="text-gray-400 transition-all duration-300 text-lg flex items-center justify-center"
               >
-                <motion.span whileHover={{ scale: 1.2 }}>
+                <motion.span
+                  whileHover={{ scale: 1.2 }}
+                  className="hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#6366f1] hover:via-[#22d3ee] hover:to-[#a855f7]"
+                >
                   {social.icon}
                 </motion.span>
               </a>

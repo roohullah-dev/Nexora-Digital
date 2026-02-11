@@ -10,29 +10,29 @@ function Help() {
       id: 1,
       title: "Advertising",
       description:
-        "I create targeted advertising campaigns that reach the right audience, boost engagement, and drive measurable growth for your business.",
+        "I create targeted campaigns that reach the right audience and boost engagement.",
       icon: assets.ads_icon,
     },
     {
       id: 2,
       title: "Branding",
       description:
-        "I craft memorable brand identities that reflect your vision, values, and personality, helping your business stand out and build trust.",
+        "I craft memorable brand identities that reflect your vision and build trust.",
       icon: assets.marketing_icon,
     },
     {
       id: 3,
       title: "Web Development",
       description:
-        "I build modern, responsive websites that deliver seamless user experiences, fast loading times, and scalable solutions for your business.",
+        "I build responsive websites with fast loading, seamless UX, and scalable solutions.",
       icon: assets.content_icon,
     },
     {
       id: 4,
       title: "Mobile App Development",
       description:
-        "I design intuitive mobile apps for iOS and Android with smooth performance, elegant design, and engaging user experiences.",
-      icon: assets.social_icon,
+        "I design intuitive mobile apps for iOS and Android with smooth performance.",
+      icon: assets.mobile,
     },
   ];
 
