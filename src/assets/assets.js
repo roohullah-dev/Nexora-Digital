@@ -44,6 +44,15 @@ import webflow from "./webflow.png";
 import subsport from "./subsport.png";
 import vision from "./vision.png";
 
+import team1 from "./team1.jpg";
+import team2 from "./team2.jpg";
+import team3 from "./team3.jpg";
+import team4 from "./team4.jpg";
+import team5 from "./team5.jpg";
+import team6 from "./team6.jpg";
+import team7 from "./team7.jpg";
+import team8 from "./team8.jpg";
+
 export const company_logos = [
   subsport,
   zoom_logo,
@@ -95,43 +104,43 @@ export default assets;
 
 export const teamData = [
   {
-    name: "Haley Carter",
-    title: "CEO & founder",
-    image: "./service1.jpg",
-  },
-  {
-    name: "James Walker",
-    title: "Ads manager",
-    image: "./service2.jpg",
-  },
-  {
-    name: "Jessica Morgan",
-    title: "Vice president",
-    image: "./service3.jpg",
-  },
-  {
-    name: "Ashley Bennett",
-    title: "Marketing & sales",
-    image: "https://randomuser.me/api/portraits/women/10.jpg",
+    name: "Olivia Bennett",
+    title: "Marketing & Sales Lead",
+    image: team1, // female
   },
   {
     name: "Emily Parker",
-    title: "Content marketer",
-    image: "https://randomuser.me/api/portraits/women/11.jpg",
+    title: "Content Marketing Specialist",
+    image: team2, // female
   },
   {
     name: "Ryan Mitchell",
-    title: "Content writer",
-    image: "https://randomuser.me/api/portraits/men/9.jpg",
+    title: "Content Writer",
+    image: team3, // male
   },
   {
-    name: "Megan Brooks",
-    title: "Performance manager",
-    image: "https://randomuser.me/api/portraits/women/12.jpg",
+    name: "Ethan Brooks",
+    title: "Performance Manager",
+    image: team4, // male
   },
   {
     name: "Amber Foster",
-    title: "Senior writer",
-    image: "https://randomuser.me/api/portraits/women/14.jpg",
+    title: "Senior Copywriter",
+    image: team5, // female
+  },
+  {
+    name: "Sophia Thompson",
+    title: "Content Manager",
+    image: team6, // female
+  },
+  {
+    name: "Jessica Smith",
+    title: "Social Media Strategist",
+    image: team7, // female
+  },
+  {
+    name: "Liam Johnson",
+    title: "UX Designer",
+    image: team8, // male
   },
 ];

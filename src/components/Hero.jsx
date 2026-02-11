@@ -6,14 +6,19 @@ function Hero() {
   return (
     <section
       id="home"
+      // className="
+      //   flex flex-col items-center gap-6 text-center w-full overflow-hidden
+      //   text-gray-700 dark:text-white
+      //   px-3 sm:px-12 lg:px-44 pt-16 sm:pt-24 lg:pt-32 pb-8 scroll-mt-20 sm:scroll-mt-32
+      // "
       className="
-        flex flex-col items-center gap-6 text-center w-full overflow-hidden
-        text-gray-700 dark:text-white
-        px-3 sm:px-12 lg:px-44 pt-16 sm:pt-24 lg:pt-32 pb-8 scroll-mt-20 sm:scroll-mt-32
-      "
+  flex flex-col items-center gap-6 text-center w-full overflow-hidden
+  text-gray-700 dark:text-white
+  px-3 sm:px-12 lg:px-24 xl:px-40 pt-16 sm:pt-24 lg:pt-32 pb-8 scroll-mt-20 sm:scroll-mt-32
+"
     >
       {/* Trusted div */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -22,6 +27,32 @@ function Hero() {
       >
         <img src={assets.trusted_profile_Images} alt="" className="w-40" />
         <p className="text-xs font-medium">Trusted by 10K+ people</p>
+      </motion.div>
+       */}
+      {/* Trusted div */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="
+    inline-flex items-center gap-2 border border-gray-700 p-1.5 pr-4 rounded-full
+    max-w-full
+    w-11/12 sm:w-80 md:w-96 lg:w-auto
+    justify-center
+  "
+      >
+        <img
+          src={assets.trusted_profile_Images}
+          alt=""
+          className="
+      w-24 sm:w-32 md:w-36 lg:w-40
+      h-auto
+    "
+        />
+        <p className="text-xs sm:text-sm md:text-base font-medium text-center">
+          Trusted by 10K+ people
+        </p>
       </motion.div>
 
       {/* Hero heading */}
