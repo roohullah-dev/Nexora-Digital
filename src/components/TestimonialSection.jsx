@@ -56,13 +56,13 @@ export default function TestimonialSection() {
       // className="py-24 bg-black/70 relative z-10"
       className="section-margin-top relative z-10 px-3 sm:px-12 lg:px-44 py-2.5"
     >
-      <div className="max-w-3xl mx-auto px-6 text-center ">
+      <div className="max-w-3xl mx-auto px-6 text-center">
         {/* Section Heading */}
-
-        <Title
-          title="What Our Clients Say"
-          desc="Our clients trust us to deliver exceptional digital experiences. Here’s what they have to say about working with our team."
-        />
+  
+          <Title
+            title="What Our Clients Say"
+            desc="Our clients trust us to deliver exceptional digital experiences. Here’s what they have to say about working with our team."
+          />
 
         {/* Testimonial Body */}
         <div className="relative overflow-hidden">
@@ -86,14 +86,16 @@ export default function TestimonialSection() {
               </motion.p>
 
               <div className="flex items-center justify-center gap-4 mt-6">
-                {/* Gradient Border Wrapper */}
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full p-[2px] bg-gradient-to-r from-[#6366f1] via-[#22d3ee] to-[#a855f7] animate-gradient">
-                  <img
-                    src={testimonials[current].avatar}
-                    alt={testimonials[current].name}
-                    className="w-full h-full rounded-full object-cover border-2 border-gray-900"
-                  />
-                </div>
+  {/* Gradient Border Wrapper */}
+  <div className="w-12 h-12 md:w-14 md:h-14 rounded-full p-[2px] bg-gradient-to-r from-[#6366f1] via-[#22d3ee] to-[#a855f7] animate-gradient">
+    <img
+      src={testimonials[current].avatar}
+      alt={testimonials[current].name}
+      className="w-full h-full rounded-full object-cover border-2 border-gray-900"
+    />
+  </div>
+</div>
+
 
                 <div className="text-left">
                   <h3 className="dark:text-white font-semibold text-sm md:text-base">
