@@ -63,7 +63,7 @@ export default function TestimonialSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-3xl md:text-4xl font-bold dark:text-white mb-12 text-center tracking-wide"
+          className=" dark:text-white mb-12 text-center tracking-wide"
         >
           <Title
             title="What Our Clients Say"

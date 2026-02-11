@@ -17,7 +17,6 @@ function Footer({ theme }) {
       toast.error("Please enter your email!");
       return;
     }
-    console.log("Subscribed with email:", email);
     toast.success("Subscribed successfully!");
     setEmail("");
   };
@@ -55,23 +54,25 @@ function Footer({ theme }) {
     },
   ];
 
+  const quickLinks = ["home", "services", "our-work", "contact-us"];
+
   return (
     <motion.footer
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="bg-slate-100 dark:bg-gray-900 dark:text-white pt-10 pb-4 mt-16 px-4 sm:px-12 lg:px-24 xl:px-40"
+      className="bg-slate-100 dark:bg-gray-900 dark:text-white pt-10 pb-6 px-4 sm:px-12 lg:px-24 xl:px-40"
     >
       {/* FOOTER TOP */}
-      <div className="flex flex-col lg:flex-row justify-between items-start gap-10 text-center lg:text-left w-full">
-        {/* Left Block */}
+      <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-10 w-full">
+        {/* Logo & Quick Links */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex flex-col items-center lg:items-start space-y-5 text-gray-700 dark:text-gray-400 w-full lg:w-1/2"
+          className="flex flex-col items-center lg:items-start space-y-5 w-full lg:w-1/2"
         >
           <button
             onClick={() => scrollToSection("home")}
@@ -79,33 +80,21 @@ function Footer({ theme }) {
           >
             <img src="/logo_300_70.png" alt="Logo" className="w-48 sm:w-60" />
           </button>
-          <p className="max-w-md text-sm sm:text-base">
+          <p className="max-w-md text-sm sm:text-base text-center lg:text-left">
             Building digital experiences that drive results, inspire trust, and
             elevate your brand.
           </p>
-          {/* Quick links  */}
-          {/* <ul className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6">
-            {["home", "services", "our-work", "contact-us"].map((sec, idx) => (
-              <li key={idx}>
-                <button
-                  onClick={() => scrollToSection(sec)}
-                  className="hover:text-purple-600 dark:hover:text-white transition-colors duration-200 text-sm sm:text-base"
-                >
-                  {sec
-                    .replace("-", " ")
-                    .replace(/\b\w/g, (c) => c.toUpperCase())}
-                </button>
-              </li>
-            ))}
-          </ul> */}
+
+          {/* Quick Links */}
           <ul className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6">
-            {["home", "services", "our-work", "contact-us"].map((sec, idx) => (
+            {quickLinks.map((sec, idx) => (
               <li key={idx}>
                 <button
                   onClick={() => scrollToSection(sec)}
                   className="transition-all duration-300 text-sm sm:text-base
-                   hover:bg-gradient-to-r hover:from-[#6366f1] hover:via-[#22d3ee] hover:via-[#a855f7] hover:to-[#6366f1]
-                   hover:text-transparent hover:bg-clip-text"
+                             hover:bg-gradient-to-r hover:from-[#6366f1] hover:via-[#22d3ee]
+                             hover:via-[#a855f7] hover:to-[#6366f1]
+                             hover:text-transparent hover:bg-clip-text"
                 >
                   {sec
                     .replace("-", " ")
@@ -116,7 +105,7 @@ function Footer({ theme }) {
           </ul>
         </motion.div>
 
-        {/* Right Block - Newsletter */}
+        {/* Newsletter */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -128,7 +117,7 @@ function Footer({ theme }) {
             Subscribe to our newsletter
           </h3>
           <p className="text-sm mt-2 mb-4 text-center lg:text-left">
-            The latest news articles and resources, sent to your inbox weekly
+            The latest news and resources, sent to your inbox weekly
           </p>
           <div className="flex flex-col sm:flex-row w-full max-w-md gap-2">
             <input
@@ -138,12 +127,6 @@ function Footer({ theme }) {
               placeholder="Enter your email"
               className="w-full p-3 text-sm outline-none rounded-full sm:rounded-l-full dark:text-gray-200 bg-transparent border border-gray-300 dark:border-gray-500"
             />
-            {/* <button
-              onClick={handleSubscribe}
-              className="button  text-white py-3 px-6 sm:px-10 rounded-full sm:rounded-r-full hover:scale-105 transition-transform duration-200"
-            >
-              Subscribe
-            </button> */}
             <button
               onClick={handleSubscribe}
               className="button text-center text-white py-3 px-6 sm:px-10 rounded-full sm:rounded-r-full hover:scale-105 transition-transform duration-200"
@@ -164,29 +147,11 @@ function Footer({ theme }) {
         viewport={{ once: true }}
         className="flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-4 text-sm text-gray-500 dark:text-gray-400"
       >
-        <p>Copyright © 2025 RoohullahDev - All Rights Reserved.</p>
+        <p className="text-center sm:text-left">
+          Copyright © 2026 RoohullahDev - All Rights Reserved.
+        </p>
 
         {/* Social Links */}
-        {/* <ul className="flex gap-4 justify-center">
-          {socialData.map((social, index) => (
-            <li key={index}>
-              <a
-                href={social.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={social.name}
-                className="text-gray-500 dark:text-gray-300 hover:text-purple-600 dark:hover:text-white transition-colors duration-200 text-lg flex items-center justify-center"
-              >
-                <motion.span
-                  whileHover={{ scale: 1.2 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  {social.icon}
-                </motion.span>
-              </a>
-            </li>
-          ))}
-        </ul> */}
         <ul className="flex gap-4 justify-center">
           {socialData.map((social, index) => (
             <li key={index}>
@@ -196,8 +161,9 @@ function Footer({ theme }) {
                 rel="noopener noreferrer"
                 aria-label={social.name}
                 className="text-gray-500 dark:text-gray-300 transition-all duration-300 text-lg flex items-center justify-center
-                   hover:bg-gradient-to-r hover:from-[#6366f1] hover:via-[#22d3ee] hover:via-[#a855f7] hover:to-[#6366f1]
-                   hover:text-transparent hover:bg-clip-text"
+                           hover:bg-gradient-to-r hover:from-[#6366f1] hover:via-[#22d3ee]
+                           hover:via-[#a855f7] hover:to-[#6366f1]
+                           hover:text-transparent hover:bg-clip-text"
               >
                 <motion.span
                   whileHover={{ scale: 1.2 }}
