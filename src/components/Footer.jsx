@@ -62,39 +62,32 @@ function Footer({ theme }) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="bg-slate-100 dark:bg-gray-900 dark:text-white pt-10 pb-6 px-4 sm:px-12 lg:px-24 xl:px-40"
+      className="bg-gray-900 text-white pt-10 pb-6 px-4 sm:px-12 lg:px-24 xl:px-40"
     >
-      {/* FOOTER TOP */}
-      <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-10 w-full">
-        {/* Logo & Quick Links */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="flex flex-col items-center lg:items-start space-y-5 w-full lg:w-1/2"
-        >
+      {/* Footer Top */}
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-start gap-10">
+        {/* Left Block */}
+        <motion.div className="flex flex-col items-center lg:items-start space-y-5 w-full lg:w-1/2 text-center lg:text-left">
           <button
             onClick={() => scrollToSection("home")}
             className="cursor-pointer focus:outline-none"
           >
             <img src="/logo_300_70.png" alt="Logo" className="w-48 sm:w-60" />
           </button>
-          <p className="max-w-md text-sm sm:text-base text-center lg:text-left">
+          <p className="max-w-md text-sm sm:text-base">
             Building digital experiences that drive results, inspire trust, and
             elevate your brand.
           </p>
 
-          {/* Quick Links */}
           <ul className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6">
-            {quickLinks.map((sec, idx) => (
+            {["home", "services", "our-work", "contact-us"].map((sec, idx) => (
               <li key={idx}>
                 <button
                   onClick={() => scrollToSection(sec)}
                   className="transition-all duration-300 text-sm sm:text-base
-                             hover:bg-gradient-to-r hover:from-[#6366f1] hover:via-[#22d3ee]
-                             hover:via-[#a855f7] hover:to-[#6366f1]
-                             hover:text-transparent hover:bg-clip-text"
+                         hover:bg-gradient-to-r hover:from-[#6366f1] hover:via-[#22d3ee]
+                         hover:via-[#a855f7] hover:to-[#6366f1]
+                         hover:text-transparent hover:bg-clip-text"
                 >
                   {sec
                     .replace("-", " ")
@@ -105,27 +98,21 @@ function Footer({ theme }) {
           </ul>
         </motion.div>
 
-        {/* Newsletter */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="flex flex-col items-center lg:items-start w-full lg:w-1/2"
-        >
-          <h3 className="font-semibold text-lg sm:text-xl text-center lg:text-left">
+        {/* Right Block */}
+        <motion.div className="flex flex-col items-center lg:items-end w-full lg:w-1/2 text-center lg:text-right">
+          <h3 className="font-semibold text-lg sm:text-xl">
             Subscribe to our newsletter
           </h3>
-          <p className="text-sm mt-2 mb-4 text-center lg:text-left">
+          <p className="text-sm mt-2 mb-4">
             The latest news and resources, sent to your inbox weekly
           </p>
-          <div className="flex flex-col sm:flex-row w-full max-w-md gap-2">
+          <div className="flex flex-col sm:flex-row w-full max-w-md gap-2 justify-center lg:justify-end">
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
-              className="w-full p-3 text-sm outline-none rounded-full sm:rounded-l-full dark:text-gray-200 bg-transparent border border-gray-300 dark:border-gray-500"
+              className="w-full p-3 text-sm outline-none rounded-full sm:rounded-l-full bg-gray-800 border border-gray-700 text-white"
             />
             <button
               onClick={handleSubscribe}
@@ -137,21 +124,14 @@ function Footer({ theme }) {
         </motion.div>
       </div>
 
-      <hr className="border-gray-300 dark:border-gray-600 my-6" />
+      <hr className="border-gray-700 my-6" />
 
-      {/* FOOTER BOTTOM */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.4 }}
-        viewport={{ once: true }}
-        className="flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-4 text-sm text-gray-500 dark:text-gray-400"
-      >
+      {/* Footer Bottom */}
+      <motion.div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-4 text-sm text-gray-400">
         <p className="text-center sm:text-left">
           Copyright © 2026 RoohullahDev - All Rights Reserved.
         </p>
 
-        {/* Social Links */}
         <ul className="flex gap-4 justify-center">
           {socialData.map((social, index) => (
             <li key={index}>
@@ -160,15 +140,9 @@ function Footer({ theme }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.name}
-                className="text-gray-500 dark:text-gray-300 transition-all duration-300 text-lg flex items-center justify-center
-                           hover:bg-gradient-to-r hover:from-[#6366f1] hover:via-[#22d3ee]
-                           hover:via-[#a855f7] hover:to-[#6366f1]
-                           hover:text-transparent hover:bg-clip-text"
+                className="text-gray-400 hover:bg-gradient-to-r hover:from-[#6366f1] hover:via-[#22d3ee] hover:via-[#a855f7] hover:to-[#6366f1] hover:text-transparent hover:bg-clip-text transition-all duration-300 text-lg flex items-center justify-center"
               >
-                <motion.span
-                  whileHover={{ scale: 1.2 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
+                <motion.span whileHover={{ scale: 1.2 }}>
                   {social.icon}
                 </motion.span>
               </a>

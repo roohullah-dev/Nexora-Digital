@@ -30,7 +30,7 @@ function Hero() {
       </motion.div>
        */}
       {/* Trusted div */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -48,6 +48,32 @@ function Hero() {
           className="
       w-24 sm:w-32 md:w-36 lg:w-40
       h-auto
+    "
+        />
+        <p className="text-xs sm:text-sm md:text-base font-medium text-center">
+          Trusted by 10K+ people
+        </p>
+      </motion.div> */}
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="
+    inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-4
+    border border-gray-700 p-2 sm:p-3 rounded-full
+    max-w-full w-full sm:w-80 md:w-96 lg:w-auto
+    justify-center
+  "
+      >
+        <img
+          src={assets.trusted_profile_Images}
+          alt="Trusted Profiles"
+          className="
+      w-24 sm:w-28 md:w-32 lg:w-36
+      h-auto
+      object-contain
     "
         />
         <p className="text-xs sm:text-sm md:text-base font-medium text-center">
