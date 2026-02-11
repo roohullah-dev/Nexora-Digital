@@ -56,20 +56,13 @@ export default function TestimonialSection() {
       // className="py-24 bg-black/70 relative z-10"
       className="section-margin-top relative z-10 px-3 sm:px-12 lg:px-44 py-2.5"
     >
-      <div className="max-w-3xl mx-auto px-6 text-center">
+      <div className="max-w-3xl mx-auto px-6 text-center ">
         {/* Section Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="text-3xl md:text-4xl font-bold dark:text-white mb-12 text-center tracking-wide"
-        >
-          <Title
-            title="What Our Clients Say"
-            desc="Our clients trust us to deliver exceptional digital experiences. Here’s what they have to say about working with our team."
-          />
-        </motion.h2>
+
+        <Title
+          title="What Our Clients Say"
+          desc="Our clients trust us to deliver exceptional digital experiences. Here’s what they have to say about working with our team."
+        />
 
         {/* Testimonial Body */}
         <div className="relative overflow-hidden">
