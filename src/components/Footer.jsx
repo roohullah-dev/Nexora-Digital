@@ -62,7 +62,7 @@ function Footer({ theme }) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="bg-gray-900 text-white pt-10 pb-6 px-4 sm:px-12 lg:px-24 xl:px-40"
+      className="bg-slate-100 dark:bg-gray-900 dark:text-white  pt-10 mt-10 pb-6 px-4 sm:px-12 lg:px-24 xl:px-40"
     >
       {/* Footer Top */}
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-start gap-10">
@@ -99,7 +99,7 @@ function Footer({ theme }) {
         </motion.div>
 
         {/* Right Block */}
-        <motion.div className="flex flex-col items-center lg:items-end w-full lg:w-1/2 text-center lg:text-right">
+        <motion.div className="flex flex-col items-center lg:items-end w-full lg:w-1/2 text-center lg:text-left">
           <h3 className="font-semibold text-lg sm:text-xl">
             Subscribe to our newsletter
           </h3>
@@ -116,7 +116,7 @@ function Footer({ theme }) {
             />
             <button
               onClick={handleSubscribe}
-              className="button text-center text-white py-3 px-6 sm:px-10 rounded-full sm:rounded-r-full hover:scale-105 transition-transform duration-200"
+              className="button text-center items-center text-white py-3 px-6 sm:px-10 rounded-full sm:rounded-r-full hover:scale-105 transition-transform duration-200"
             >
               Subscribe
             </button>
